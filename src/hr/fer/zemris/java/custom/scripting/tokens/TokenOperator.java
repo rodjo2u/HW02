@@ -9,6 +9,11 @@ package hr.fer.zemris.java.custom.scripting.tokens;
  */
 public class TokenOperator extends Token {
 
+	public TokenOperator(String symbol) {
+		super();
+		this.symbol = symbol;
+	}
+
 	private String symbol;
 	
 	/**
@@ -17,6 +22,11 @@ public class TokenOperator extends Token {
 	 */
 	@Override
 	public String asText() {
+		return symbol;
+	}
+	
+	@Override
+	public String toString() {
 		return symbol;
 	}
 	

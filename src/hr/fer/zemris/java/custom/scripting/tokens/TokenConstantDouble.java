@@ -11,6 +11,11 @@ public class TokenConstantDouble extends Token {
 
 	private double value;
 	
+	public TokenConstantDouble(String value) {
+		super();
+		this.value = Double.parseDouble(value);
+	}
+
 	/**
 	 * Method returns string representation of 
 	 * TokenConstantDouble double value.
@@ -18,6 +23,11 @@ public class TokenConstantDouble extends Token {
 	 */
 	@Override
 	public String asText() {
+		return Double.toString(value);
+	}
+	
+	@Override
+	public String toString() {
 		return Double.toString(value);
 	}
 	

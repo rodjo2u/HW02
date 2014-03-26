@@ -9,6 +9,11 @@ package hr.fer.zemris.java.custom.scripting.tokens;
  */
 public class TokenFunction extends Token {
 
+	public TokenFunction(String name) {
+		super();
+		this.name = name;
+	}
+
 	private String name;
 	
 	/**
@@ -17,6 +22,11 @@ public class TokenFunction extends Token {
 	 */
 	@Override
 	public String asText() {
+		return name;
+	}
+	
+	@Override
+	public String toString() {
 		return name;
 	}
 	

@@ -6,22 +6,30 @@ package hr.fer.zemris.java.custom.scripting.tokens;
  */
 public class TokenVariable extends Token {
 
-	private int value;
+	private String name;
 	
+	public TokenVariable(String name) {
+		this.name = name;
+	}
 	/**
 	 * Method returns string representation of TokenVariable int value.
 	 * @return String representation of TokenVariable int value.
 	 */
 	@Override
 	public String asText() {
-		return Integer.toString(value);
+		return name;
+	}
+	
+	@Override
+	public String toString() {
+		return name;
 	}
 	
 	/**
-	 * Getter method for TokenVariable int value.
-	 * @return int value of TokenVariable.
+	 * Getter method for TokenVariable <code>name</code> value.
+	 * @return String value of TokenVariable.
 	 */
-	public int getValue() {
-		return value;
+	public String getName() {
+		return name;
 	}
 }

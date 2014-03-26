@@ -4,6 +4,11 @@ public class TokenConstantInteger extends Token {
 
 	private int value;
 	
+	public TokenConstantInteger(String value) {
+		super();
+		this.value = Integer.parseInt(value);
+	}
+
 	/**
 	 * Method returns string representation of 
 	 * TokenConstantInteger int value.
@@ -11,6 +16,11 @@ public class TokenConstantInteger extends Token {
 	 */
 	@Override
 	public String asText() {
+		return Integer.toString(value);
+	}
+	
+	@Override
+	public String toString() {
 		return Integer.toString(value);
 	}
 	
